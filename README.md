@@ -1,5 +1,9 @@
 # rmstu-api-gateway-starter
 
+clone the project and type
+-    `yarn`
+-  `yarn run dev`
+
 
 
 #### 🪸 Branches
