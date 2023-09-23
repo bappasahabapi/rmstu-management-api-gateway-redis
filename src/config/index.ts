@@ -10,7 +10,8 @@ const envVarsZodSchema = z.object({
         .string()
         .default('3030')
         .refine((val) => Number(val)),
-    JWT_SECRET: z.string()
+    JWT_SECRET: z.string(),
+    REDIS_URL:z.string()
 });
 
 const envVars = envVarsZodSchema.parse(process.env);
@@ -20,5 +21,8 @@ export default {
     port: envVars.PORT,
     jwt: {
         secret: envVars.JWT_SECRET
+    },
+    redis:{
+        url:envVars.REDIS_URL
     }
 };
